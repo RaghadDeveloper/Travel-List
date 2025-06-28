@@ -4,7 +4,7 @@ export default function Form({ onAddItem }) {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
   function handleSubmit(e) {
-    e.preventDefault(); 
+    e.preventDefault(); // Prevent default form submission behavior(don't allow reload the page)
     if (!name) return;
     const item = {
       id: Date.now(),
